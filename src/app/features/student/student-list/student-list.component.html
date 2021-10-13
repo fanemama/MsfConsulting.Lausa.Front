@@ -1,0 +1,71 @@
+
+  <div>
+    <form class="serch-form" [formGroup]="formGroup">
+      <mat-form-field class="serch-margin" appearance="fill">
+        <mat-label>FirstName</mat-label>
+        <input matInput placeholder="FirstName" formControlName="firstName" />
+      </mat-form-field>
+
+      <mat-form-field class="serch-margin" appearance="fill">
+        <mat-label>LastName</mat-label>
+        <input matInput placeholder="LastName" formControlName="lastName" />
+      </mat-form-field>
+
+      <mat-form-field class="serch-margin" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" formControlName="email" />
+      </mat-form-field>
+
+      <mat-form-field class="serch-margin" appearance="fill">
+        <mat-label>Phone</mat-label>
+        <input matInput placeholder="Phone" formControlName="phone" />
+      </mat-form-field>
+
+      <div class="search-button">
+        <button mat-fab color="primary" (click)="searh()">
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>
+  <div>
+    <div class="result">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+        <ng-container matColumnDef="firstName">
+          <th mat-header-cell *matHeaderCellDef>No.</th>
+          <td mat-cell *matCellDef="let element">{{ element.firstName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="lastName">
+          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <td mat-cell *matCellDef="let element">{{ element.lastName }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="email">
+          <th mat-header-cell *matHeaderCellDef>Weight</th>
+          <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="phone">
+          <th mat-header-cell *matHeaderCellDef>phone</th>
+          <td mat-cell *matCellDef="let element">{{ element.phone }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="nbrEnrollment">
+          <th mat-header-cell *matHeaderCellDef>number of enrollment</th>
+          <td mat-cell *matCellDef="let element">{{ element.nbrEnrollment }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="nbrUnenrollment">
+          <th mat-header-cell *matHeaderCellDef>number of unenrollment</th>
+          <td mat-cell *matCellDef="let element">{{ element.nbrUnenrollment }}</td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr (click)="edit(row)" mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>

@@ -1,6 +1,6 @@
 export interface LigthStudentModel {
   id: number;
-  FirstName: number;
+  firstName: number;
   lastName: String;
   email: string;
   phone: string;
