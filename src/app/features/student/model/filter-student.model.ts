@@ -1,8 +1,6 @@
-export interface FilterStudentModel {
-  FirstName: number;
-  lastName: String;
-  email: string;
-  phone: string;
-  nbrEnrollment: number;
-  nbrUnenrollment: number;
+export class FilterStudentModel {
+  firstName!: number;
+  lastName!: String;
+  email!: string;
+  phone!: string;
 }

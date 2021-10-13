@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { NgxsModule } from '@ngxs/store';
 import { environment } from 'src/environments/environment';
 import { StudentState } from './store/student/state';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   imports: [
     CommonModule,
+    HttpClientModule,
     NgxsModule.forRoot([StudentState], {
       developmentMode: !environment.production,
     }),

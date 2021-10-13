@@ -11,20 +11,21 @@ import { Student } from './action';
 @Injectable()
 export class StudentState {
   @Action(Student.Set)
-  set(ctx: StateContext<StudentModel>, action: StudentModel) {
-    ctx.setState(action);
+  set(ctx: StateContext<StudentModel>, action: Student.Set) {
+    debugger;
+    ctx.setState(action.student);
   }
 
   @Action(Student.UpdateEnrollment)
-  updateEnrollment(ctx: StateContext<StudentModel>, action: EnrollementModel) {
+  updateEnrollment(ctx: StateContext<StudentModel>, action: Student.UpdateEnrollment) {
     const state = ctx.getState();
-    const updatedEnrollments = state.enrollments.map((item) => item.id == action.id ? action : item );
+    const updatedEnrollments = state.enrollments.map((item) => item.id == action.enrollement.id ? action.enrollement : item );
     ctx.setState({ ...state, enrollments: updatedEnrollments });
   }
 
   @Action(Student.AddEnrollment)
-  addEnrollment(ctx: StateContext<StudentModel>, action: EnrollementModel) {
+  addEnrollment(ctx: StateContext<StudentModel>, action: Student.AddEnrollment) {
     const state = ctx.getState();
-    ctx.setState({ ...state, enrollments: [...state.enrollments, action] });
+    ctx.setState({ ...state, enrollments: [...state.enrollments, action.enrollement] });
   }
 }

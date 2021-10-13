@@ -1,0 +1,30 @@
+.serch-form{
+
+  display: flex;
+  margin: 20px;
+}
+
+.serch-margin {
+  margin-right: 15px;
+}
+
+table {
+  width: 900px;
+}
+
+.result{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button {
+  display: flex;
+  justify-content: center;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
