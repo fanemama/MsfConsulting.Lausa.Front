@@ -52,4 +52,8 @@ export class StudentListComponent implements OnInit {
   private search(filter: FilterStudentModel) {
     this.studentService.search(filter).subscribe((x) => (this.dataSource = x));
   }
+
+  viewMap() {
+    this.router.navigate(['map']);
+  }
 }
