@@ -9,6 +9,7 @@ import { StudentResolver } from './resolver/student.resolver';
 import { StudentPersonalInfoComponent } from './student-personal-info/student-personal-info.component';
 import { StudentEnrollmentComponent } from './student-enrollment/student-enrollment.component';
 import { StudentUnenrollmentComponent } from './student-unenrollment/student-unenrollment.component';
+import { StudentComponent } from './student.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import { StudentUnenrollmentComponent } from './student-unenrollment/student-une
     StudentRoutingModule
   ],
   declarations: [
+    StudentComponent,
     StudentListComponent,
     StudentEditComponent,
     StudentPersonalInfoComponent,
