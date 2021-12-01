@@ -1,0 +1,9 @@
+<div id="ol-map" class="map" role="main"></div>
+<div id="popup" class="ol-popup" #popup [hidden]="!showPopUp">
+  <a
+    id="popup-closer"
+    class="ol-popup-closer"
+    (click)="closeStudentPopUp()"
+  ></a>
+  <div id="popup-content" #popupContent></div>
+</div>

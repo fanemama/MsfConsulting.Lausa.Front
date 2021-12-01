@@ -9,6 +9,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./features/student/student.module').then((m) => m.StudentModule),
   },
+  {
+    path: 'map',
+    loadChildren: () =>
+      import('./features/map/map.module').then((m) => m.MapModule),
+  },
 ];
 
 @NgModule({
