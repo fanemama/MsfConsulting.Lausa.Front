@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  readApiUrl: 'https://localhost:44344/Student',
-  writeApiUrl: '/api/collectives',
+  readApiUrl: 'https://localhost:44344',
+  writeApiUrl: 'https://localhost:44304',
 };
 
 /*

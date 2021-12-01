@@ -1,0 +1,21 @@
+<div class="main">
+  <h3>enrollment editing</h3>
+  <form class="edit-form" [formGroup]="formGroup">
+    <div class="edit-column">
+    <mat-form-field appearance="fill">
+      <mat-label>Grade</mat-label>
+      <input matInput placeholder="Grade" formControlName="grade" />
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Course</mat-label>
+      <input matInput placeholder="Course" formControlName="course" />
+    </mat-form-field>
+    <button mat-button color="primary" (click)="save()">Save</button>
+  </div>
+  <div class="edit-column">
+
+  </div>
+  </form>
+
+</div>

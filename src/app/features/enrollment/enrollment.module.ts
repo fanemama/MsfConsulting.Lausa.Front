@@ -1,11 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { EnrollmentComponent } from './enrollment.component';
+import { EnrollmentEditComponent } from './enrollment-edit/enrollment-edit.component';
+import { EnrollmentCreateComponent } from './enrollment-create/enrollment-create.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { EnrollmentService } from './service/enrollment.service';
+import { EnrollmentRoutingModule } from './enrollment-routing.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+    EnrollmentRoutingModule
   ],
-  declarations: [EnrollmentComponent]
+  declarations: [
+    EnrollmentCreateComponent,
+    EnrollmentEditComponent],
+    providers:[EnrollmentService]
 })
 export class EnrollmentModule { }
